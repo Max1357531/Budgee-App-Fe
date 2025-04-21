@@ -1,12 +1,22 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import CategoryList from './CategoryList.vue'
-import { useStore } from './assets/stores/currentBudgetData'
+import { useCategoryStore } from './assets/stores/categoryStore'
 
-let budgetStore = useStore()
 
-const categories = budgetStore.getCategories
+// Call the function to get actual store instance
+const categoryStore = useCategoryStore()
 
+// Call action to load categories when component mounts
+onMounted(() => {
+  console.log('Mounted - calling loadCategories')
+  categoryStore.loadCategories()
+})
+
+//Get processed categories for the UI
+const categories = categoryStore.getProcessedCategories
+
+// Currency dropdown setup
 const selectedCurrency = ref('GBP')
 const newCategoryName = ref('')
 const isAdding = ref(false)

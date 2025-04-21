@@ -2,16 +2,13 @@ import { defineStore, storeToRefs } from "pinia";
 
 export const useStore = defineStore("budgetData", {
   state: () => {
-    return { categories: [], budget: {budget_id: 1, budget: 0, interval: {start_date: new Date(), end_date: new Date()}} };
+    return { categories: [], budget: { budget_id: 1, budget: 0, interval: { start_date: new Date(), end_date: new Date() } } };
   },
-  // could also be defined as
-  //  state: () => ({ count: 0 })
-
 
   actions: {
-    addExpense(amount, categoryId, budgetId = 1, date=new Date(), description = "", expenseId = 0) {
-      
-      const category = this.categories.find((cat => 
+    addExpense(amount, categoryId, budgetId = 1, date = new Date(), description = "", expenseId = 0) {
+
+      const category = this.categories.find((cat =>
         cat.category_id === categoryId
       ))
 
@@ -26,11 +23,11 @@ export const useStore = defineStore("budgetData", {
         expense_id: expenseId,
       }
 
-      category.expenses.push(newExpense)      
-    }, 
-    
-    addCategory(name, description, categoryId=this.categories.length, colourId = 301){
-      
+      category.expenses.push(newExpense)
+    },
+
+    addCategory(name, description, categoryId = this.categories.length, colourId = 301) {
+
       const newCategory = {
         category_id: categoryId,
         colour_id: colourId,
@@ -38,14 +35,14 @@ export const useStore = defineStore("budgetData", {
         expenses: [],
         name
       }
-      
+
       this.categories.push(newCategory)
-      
-      
+
+
     },
 
     changeBudget(newTotalBudget) {
-      this.$patch({budget:{budget:newTotalBudget}})
+      this.$patch({ budget: { budget: newTotalBudget } })
     }
 
   },
@@ -56,9 +53,9 @@ export const useStore = defineStore("budgetData", {
         newCat.amount =
           Math.round(
             100 *
-              newCat.expenses.reduce((acc, curr) => {
-                return acc + curr.amount;
-              }, 0)
+            newCat.expenses.reduce((acc, curr) => {
+              return acc + curr.amount;
+            }, 0)
           ) / 100;
         delete newCat.expenses;
         return newCat;
@@ -80,23 +77,23 @@ export const useStore = defineStore("budgetData", {
     },
     getCatAmounts: (state) => {
       return (state.categories.map((cat) => {
-        return  Math.round(
+        return Math.round(
           100 *
-            cat.expenses.reduce((acc, curr) => {
-              return acc + curr.amount;
-            }, 0)
+          cat.expenses.reduce((acc, curr) => {
+            return acc + curr.amount;
+          }, 0)
         ) / 100;
       }));
     },
-    getCatPieDataFull(){
+    getCatPieDataFull() {
       const getNewPie = structuredClone(this.getCatPieData)
-      
+
       getNewPie.labels.push("Remaining")
       getNewPie.datasets[0].backgroundColor.push("#008000")
       getNewPie.datasets[0].data.push(this.getSpendingLeft)
       return getNewPie
     },
-    getCatPieData: (state)=>{
+    getCatPieData: (state) => {
       return {
         labels: (state.categories.map((cat) => {
           return cat.name;
@@ -105,24 +102,24 @@ export const useStore = defineStore("budgetData", {
           {
             backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16', '#DD3B16'],
             data: (state.categories.map((cat) => {
-              return  Math.round(
+              return Math.round(
                 100 *
-                  cat.expenses.reduce((acc, curr) => {
-                    return acc + curr.amount;
-                  }, 0)
+                cat.expenses.reduce((acc, curr) => {
+                  return acc + curr.amount;
+                }, 0)
               ) / 100;
             }))
           }
         ]
       }
     },
-    getRatioLeftOfPeriod (){
+    getRatioLeftOfPeriod() {
 
-    
-      return (Date.now() - this.budget.interval.start_date)/(this.budget.interval.end_date-this.budget.interval.start_date)
+
+      return (Date.now() - this.budget.interval.start_date) / (this.budget.interval.end_date - this.budget.interval.start_date)
     },
-    getSpendingLeft () {
-      return this.budget.budget - this.getCatAmounts.reduce((acc,curr)=>acc + curr,0)
+    getSpendingLeft() {
+      return this.budget.budget - this.getCatAmounts.reduce((acc, curr) => acc + curr, 0)
     }
   },
 });
