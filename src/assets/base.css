@@ -73,13 +73,6 @@
     --color-border-hover: #4B5563;
   }
 }
-.dark {
-  --color-background: #1F2937;
-  --color-text: #D1FAE5;
-  --color-heading: #6EE7B7;
-  --color-border: #374151;
-  --color-border-hover: #4B5563;
-}
 
 
 body {

@@ -21,8 +21,8 @@ console.log(expensesShown.value)
   
   <div class="categoryList">
     <CategoryCard
-        :key="category._id"
-        :id="category._id"
+        :key="category.category_id"
+        :id="category.category_id"
         :name="category.name"
         :amount="category.amount"
         :percentage="category.percentage"
@@ -32,7 +32,7 @@ console.log(expensesShown.value)
 
       <div>
 
-        <ExpenseCard v-for="expense in expensesShown" :key="expense._id":expense="expense" :hex_code="category.hex_code"></ExpenseCard>
+        <ExpenseCard v-for="expense in expensesShown" :key="expense.expense_id":expense="expense" :hex_code="category.hex_code"></ExpenseCard>
       </div>
 
   </div>

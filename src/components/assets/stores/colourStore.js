@@ -19,7 +19,7 @@ export const useColourStore = defineStore('colour', {
             return state.colourPalette[randomIndex]
         },
         getHexFromId: (state)=>{
-            return (id) => state.colourPalette.find((col)=> col._id === id).hex_code
+            return (id) => state.colourPalette.find((col)=> col.id === id).hex_code
         }
     },
 

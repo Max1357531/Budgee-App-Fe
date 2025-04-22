@@ -1,10 +1,7 @@
-/** @type {import('tailwindcss').Config} */
+import 'tailwindcss';
+
 export default {
-  darkMode: 'class', 
-  content: [
-    './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
-  ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -19,8 +16,7 @@ export default {
       },
       borderRadius: {
         infinity: '9999px',
-      },
-    },
-  },
-  plugins: [],
+      }
+    }
+  }
 }
