@@ -29,8 +29,6 @@ defineProps({
         :amount="category.amount"
         :percentage="category.percentage"
         :hex_code="category.hex_code"
-        :currency="currency"
-        :locale="locale"
         />
     </div>
 </template>

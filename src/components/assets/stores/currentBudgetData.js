@@ -112,7 +112,6 @@ export const useStore = defineStore("budgetData", {
         })),
         datasets: [
           {
-            category_id: state.categories.map((cat)=>cat._id),
             backgroundColor: state.categories.map((cat)=>colorStore.getHexFromId(cat.colour_id)),
             data: (state.categories.map((cat) => {
               return  Math.round(
