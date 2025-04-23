@@ -2,6 +2,7 @@
 import { useColourStore } from './assets/stores/colourStore';
 
 const colourStore = useColourStore()
+console.log(colourStore.getPalette, '<<< colourPallete')
 </script>
 
 <template>

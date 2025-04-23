@@ -1,5 +1,6 @@
 import { defineStore, storeToRefs } from "pinia";
 import { useColourStore } from "./colourStore";
+import { getColours } from "../../../api/requests"; 
 
 export const useStore = defineStore("budgetData", {
   
@@ -133,12 +134,15 @@ export const useStore = defineStore("budgetData", {
       }
     },
     getRatioLeftOfPeriod (){
-
-    
+      
+      
       return (Date.now() - this.budget.interval.start_date)/(this.budget.interval.end_date-this.budget.interval.start_date)
     },
     getSpendingLeft () {
       return this.budget.budget - this.getCatAmounts.reduce((acc,curr)=>acc + curr,0)
-    }
+    },
+    getColours: ()=> {
+
+    },
   },
 });

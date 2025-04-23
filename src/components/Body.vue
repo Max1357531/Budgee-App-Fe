@@ -25,6 +25,7 @@ getColours()
   .then((colorData) => {
     colorData = colorData;
     colorStore.$patch({colourPalette: colorData});
+    console.log(colorStore, '<<colorStore')
     return PLACEHOLDER_GET_CURR_BUDGET();
   })
   .then((budgetData) => {
@@ -56,6 +57,7 @@ getColours()
   .catch((err) => {
     console.log(err);
   });
+
 </script>
 
 <template>

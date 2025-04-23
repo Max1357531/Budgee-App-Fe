@@ -20,7 +20,7 @@ export const useColourStore = defineStore('colour', {
         },
         getHexFromId: (state)=>{
             return (id) => state.colourPalette.find((col)=> col._id === id).hex_code
-        }
+        },
     },
 
     actions: {

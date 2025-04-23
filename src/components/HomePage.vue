@@ -4,7 +4,8 @@
     import 'tailwindcss';
     import { useStore } from './assets/stores/currentBudgetData';
     import { computed } from 'vue';
-    import ColourPreview from './ColourPreview.vue';        
+    import ColourPreview from './ColourPreview.vue';
+    import Body from './Body.vue';   
 
     let budgetStore = useStore()
 
@@ -58,6 +59,7 @@
         }
     }
 
+
 </script>
 
 
@@ -99,7 +101,7 @@
                 <div class="form-div relative">
                     <input class="custom-input" type="text" name="floting-input" placeholder=" ">
                     <label for="floating-input" class="custom-label">Category Colour</label>
-                    <!-- <ColourPreview/> -->
+                    <ColourPreview/>
                 </div>
                 <button class="home-page-button" v-on:click="addNewExpense(formData.existingCategory, formData.costOfExpense, formData.newCategory)">Save</button>
             </form>
