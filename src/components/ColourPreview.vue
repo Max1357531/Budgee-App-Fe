@@ -7,8 +7,7 @@ console.log(colourStore.getPalette, '<<< colourPallete')
 
 <template>
     <div>
-      <h2>Current Selected Colour:</h2>
-  
+     
       <div v-if="colourStore.getSelectedColour">
         <p>{{ colourStore.getSelectedColour }}</p>
         <div
@@ -23,7 +22,7 @@ console.log(colourStore.getPalette, '<<< colourPallete')
       </div>
       <p v-else>No colour selected</p>
   
-      <h3>Pick a new colour:</h3>
+      <!-- <h3>Pick a new colour:</h3>
       <ul>
         <li
           v-for="colour in colourStore.getPalette"
@@ -33,6 +32,12 @@ console.log(colourStore.getPalette, '<<< colourPallete')
         >
           {{ colour }}
         </li>
-      </ul>
+      </ul> -->
+
+      <form>
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <p><input type="submit" value="Submit"></p>
+</form>
     </div>
   </template>

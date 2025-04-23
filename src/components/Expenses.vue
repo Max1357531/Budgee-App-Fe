@@ -6,6 +6,7 @@ import { useStore } from './assets/stores/currentBudgetData'
 import { changeHSL } from '@/utils/chartData'
 import { useColourStore } from './assets/stores/colourStore'
 import { postCategory } from '@/api/requests'
+import ColourPreview from './ColourPreview.vue'
 
 
 let budgetStore = useStore()
@@ -95,6 +96,8 @@ const styleObject = reactive({
   
         
     </div>
+<ColourPreview/>
+
 </template>
 
 <style scoped>

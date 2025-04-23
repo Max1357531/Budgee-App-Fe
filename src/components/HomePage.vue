@@ -101,7 +101,6 @@
                 <div class="form-div relative">
                     <input class="custom-input" type="text" name="floting-input" placeholder=" ">
                     <label for="floating-input" class="custom-label">Category Colour</label>
-                    <ColourPreview/>
                 </div>
                 <button class="home-page-button" v-on:click="addNewExpense(formData.existingCategory, formData.costOfExpense, formData.newCategory)">Save</button>
             </form>
