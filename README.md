@@ -32,8 +32,15 @@
 - Custom extensions in **Chart.js** for advanced interactivity and seamless UX integration.
 
 - **MVC pattern** in backend ensures clear separation of logic, routing, and database interactions.
-
+## Live Demo
 ![PieWheel](https://github.com/user-attachments/assets/cdb762d1-72d9-47bc-b9f0-3d42a675f982)
+You can find the GitHub repo for the backend [here](https://github.com/Max1357531/Budgee-BE) which is hosted on Render [here](https://budgee-be-amq3.onrender.com/api/).
+
+The front end is hosted on Vercel [here](https://budgee-app-fe.vercel.app/). Note the following before checking out the front end of this project:
+
+🚨 The backend hosting for the API is through the free hosting side of **Render**. As such the backend, and content will take up to 60 seconds to spin up. Please allow for this time before checking out the website.
+🚨 The login page is a dummy, enter any details to proceed to the guest sign on account.
+
 ## Tech Stack
 ### Backend
  MongoDB         |  Fastify | JavaScript
