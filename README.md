@@ -10,6 +10,8 @@
     - **Tailwind CSS** used for utility-first, consistent styling and responsive design.
 
     - **Chart.js**, extended via a **custom subclass** of DoughnutController, powers dynamic data visualizations and doubles as an interactive navigation tool.
+      
+    - **Pinia** for global state management of budget data
 
 - Backend:
     - Developed with **Fastify**, a lightweight and performant **Node.js** web framework.
@@ -49,9 +51,10 @@ The front end is hosted on Vercel [here](https://budgee-app-fe.vercel.app/). Not
 
 ### Frontend
 
- Vue.js        |  Chart.js | Tailwind | Javascript
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![image](https://github.com/user-attachments/assets/38114ef6-1644-423c-8043-6e3f0685d9af)| ![image](https://github.com/user-attachments/assets/582471bf-427c-43c0-aebb-7956142a5fa3) | ![image](https://github.com/user-attachments/assets/69e12a22-0fae-44c1-902d-78a16dd2252b) | ![image](https://github.com/user-attachments/assets/b6af978c-4d49-4188-a972-c1a539e0a247)
+ Vue.js        |  Chart.js | Tailwind | Javascript | Pinia
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![image](https://github.com/user-attachments/assets/38114ef6-1644-423c-8043-6e3f0685d9af)| ![image](https://github.com/user-attachments/assets/582471bf-427c-43c0-aebb-7956142a5fa3) | ![image](https://github.com/user-attachments/assets/69e12a22-0fae-44c1-902d-78a16dd2252b) | ![image](https://github.com/user-attachments/assets/b6af978c-4d49-4188-a972-c1a539e0a247) | ![image](https://github.com/user-attachments/assets/cffc83df-68bc-4f6f-8639-68a2706ac252)
+
 
 ## 💻 How To Run
 First clone the repo:
