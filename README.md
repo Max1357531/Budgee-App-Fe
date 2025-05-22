@@ -3,7 +3,7 @@
 **Budgee** is a modern **personal finance application** designed to help users efficiently track their expenses, set budgets, and analyze their financial health. With an intuitive interface and real-time expense tracking, users can categorize spending, visualize trends, and **manage their finances with ease**. Budgee aims to provide clarity and control over personal finances through smart features and seamless user experience.
 
 
-## 🔧 Key Features
+## ✨ Key Features
 - Frontend:
     - Built with **Vue.js** for a reactive and modular user interface.
 
@@ -32,16 +32,16 @@
 - Custom extensions in **Chart.js** for advanced interactivity and seamless UX integration.
 
 - **MVC pattern** in backend ensures clear separation of logic, routing, and database interactions.
-## Live Demo
+## 🎬 Live Demo
 ![PieWheel](https://github.com/user-attachments/assets/cdb762d1-72d9-47bc-b9f0-3d42a675f982)
 You can find the GitHub repo for the backend [here](https://github.com/Max1357531/Budgee-BE) which is hosted on Render [here](https://budgee-be-amq3.onrender.com/api/).
 
 The front end is hosted on Vercel [here](https://budgee-app-fe.vercel.app/). Note the following before checking out the front end of this project:
 
-🚨 The backend hosting for the API is through the free hosting side of **Render**. As such the backend, and content will take up to 60 seconds to spin up. Please allow for this time before checking out the website.
-🚨 The login page is a dummy, enter any details to proceed to the guest sign on account.
+- 🚨 The backend hosting for the API is through the free hosting side of **Render**. As such the backend, and content will take up to 60 seconds to spin up. Please allow for this time before checking out the website.
+- 🚨 The login page is a dummy, enter any details to proceed to the guest sign on account.
 
-## Tech Stack
+## 🛠️ Tech Stack
 ### Backend
  MongoDB         |  Fastify | JavaScript
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -53,4 +53,18 @@ The front end is hosted on Vercel [here](https://budgee-app-fe.vercel.app/). Not
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![image](https://github.com/user-attachments/assets/38114ef6-1644-423c-8043-6e3f0685d9af)| ![image](https://github.com/user-attachments/assets/582471bf-427c-43c0-aebb-7956142a5fa3) | ![image](https://github.com/user-attachments/assets/69e12a22-0fae-44c1-902d-78a16dd2252b) | ![image](https://github.com/user-attachments/assets/b6af978c-4d49-4188-a972-c1a539e0a247)
 
-## How To Use
+## 💻 How To Run
+First clone the repo:
+```
+git clone https://github.com/Max1357531/Budgee-App-Fe
+```
+Next, navigate to the repo and install dependencies:
+```
+cd Budgee-App-Fe
+npm install
+```
+To run the app locally:
+```
+npm run dev
+```
+Open http://localhost:3000 to view it in the browser
