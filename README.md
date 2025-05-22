@@ -39,7 +39,7 @@ You can find the GitHub repo for the backend [here](https://github.com/Max135753
 The front end is hosted on Vercel [here](https://budgee-app-fe.vercel.app/). Note the following before checking out the front end of this project:
 
 - 🚨 The backend hosting for the API is through the free hosting side of **Render**. As such the backend, and content will take up to 60 seconds to spin up. Please allow for this time before checking out the website.
-- 🚨 The login page is a dummy, enter any details to proceed to the guest sign on account.
+- 🚨 The login page is a dummy, you may enter **any** details to proceed to the guest account.
 
 ## 🛠️ Tech Stack
 ### Backend
