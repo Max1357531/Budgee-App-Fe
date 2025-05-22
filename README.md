@@ -15,14 +15,21 @@
 
 - Backend:
     - Developed with **Fastify**, a lightweight and performant **Node.js** web framework.
+      
     - Uses **MongoDB** as a flexible, schema-less NoSQL database for storing user data.
+      
     - Follows the **MVC (Model-View-Controller)** architecture for organized and scalable code structure.
+      
     - Comprehensive backend testing with **Jest**, including database seeding and integration tests.
+      
 - API Communication:
     - **RESTful API** connects the frontend and backend, ensuring clean separation of concerns.
+      
 - Hosting & Deployment:
     - Frontend deployed via **Vercel** for fast, global delivery.
+      
     - Backend hosted on **Render**, providing scalable cloud deployment.
+      
 
 ## 🧰 Code Quality & Development Practices
 - Adheres to **DRY (Don't Repeat Yourself)** principles for maintainable and efficient code.
